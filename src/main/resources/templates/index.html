@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- import CSS -->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <button id="uuuu">aaaa</button>
+</div>
+</body>
+
+
+<script type="text/javascript">
+    $( function () {
+        //ajax 提交
+        $("#uuuu").click(function () {
+            $.ajax({
+                url: "http://localhost:8083/infoPage/postInfo/id",
+                type: "POST",
+                dataType:"json",
+                success: function (res) {
+                    console.log(res);
+                }
+            })
+        })
+    })
+
+
+
+</script>
+</html>
